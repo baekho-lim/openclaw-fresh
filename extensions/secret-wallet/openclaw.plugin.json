@@ -1,0 +1,31 @@
+{
+  "id": "secret-wallet",
+  "name": "Secret Wallet",
+  "description": "macOS Keychain-based credential manager with TouchID support. Replaces plaintext auth-profiles with hardware-backed security.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "binaryPath": {
+        "type": "string",
+        "description": "Absolute path to secret-wallet binary (or omit to use PATH)"
+      },
+      "autoInject": {
+        "type": "boolean",
+        "description": "Automatically inject secrets into agent environment on session start"
+      }
+    }
+  },
+  "uiHints": {
+    "binaryPath": {
+      "label": "Binary Path",
+      "help": "Path to secret-wallet CLI binary. Leave empty to use system PATH.",
+      "placeholder": "/usr/local/bin/secret-wallet",
+      "advanced": true
+    },
+    "autoInject": {
+      "label": "Auto-Inject",
+      "help": "Inject all secrets as environment variables when a session starts."
+    }
+  }
+}

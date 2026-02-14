@@ -1,0 +1,11 @@
+{
+  "name": "@openclaw/secret-wallet",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "macOS Keychain credential manager plugin for OpenClaw",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
