@@ -4,7 +4,6 @@ import { runSecretWallet } from "./runner.js";
 
 type PluginConfig = {
   binaryPath?: string;
-  autoInject?: boolean;
 };
 
 /**
@@ -86,8 +85,7 @@ function createGetTool(config: PluginConfig) {
         };
       }
       return {
-        content: [{ type: "text" as const, text: `Secret '${params.name}' retrieved successfully.` }],
-        details: { value: result.stdout },
+        content: [{ type: "text" as const, text: result.stdout }],
       };
     },
   };
